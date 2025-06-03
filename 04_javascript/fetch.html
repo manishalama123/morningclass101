@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+</head>
+<body>
+
+    <!-- Fetch is a js method to connect with API.
+    It is used to get and post data from and to server 
+    load JSON, text,files or even images.
+    
+    it returns promises instead of using callbacks.
+    it's sinpler and more powerful than older methods.
+    -->
+    <p id="box"></p>
+
+    <script>
+
+        fetch(`https://fakestoreapi.com/products`)
+        // .then(res =>console.log(res))
+        .then(res =>res.json())
+        // .then(res => console.log(res))
+        // .then(products =>{
+        //     // filter products of price greater than 30
+        //     const result = products.filter(product =>{
+        //         return product.price>30
+        //     })
+        //     console.log(result);
+        // })
+        .then(products =>{
+            // filter products of price greater than 30
+            const result = products[0].title
+            console.log(result);
+            
+        })
+        
+
+        document.getElementById('box').innerText =result
+        
+
+
+    </script>
+</body>
+</html>

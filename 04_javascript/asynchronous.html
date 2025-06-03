@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        let news = [
+            {
+                newsTitle : 'First news',
+                newsContent : 'This is content of first news'
+
+            },
+            
+            {
+                newsTitle : 'second news',
+                newsContent : 'This is content of second news'
+
+            },
+            {
+                newsTitle : 'Third news',
+                newsContent : 'This is content of third news'
+
+            },
+        ]
+            
+        const showNews = () =>{
+            setTimeout(()=>{
+
+
+            
+            result = ``;
+            news.forEach((post)=>{
+                return result += `
+                <li> ${post.newsTitle}</li>
+                <p> ${post.newsContent}</p>
+                `
+            })
+            document.querySelector('div').innerHTML = result},1000);
+        }
+        
+
+        const addNews =(data)=>{
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    news.push(data);
+                    const error = true
+                    if(!error){
+                        resolve()
+                    }
+                
+                else{
+                    reject('Error : Something went wrong.')
+                }
+            },3000)
+           
+        })
+    }
+
+    new_news = {
+        newsTitle : 'Fourth News',
+        newsContent : 'This is content of FOurth news'
+    }
+
+    //     addNews(new_news)
+    //     .then(showNews)
+    //     .catch(err =>console.log(err));
+
+    // async and await
+        // traditional ways
+    // async function demoFunction(){
+    //     await addNews(new_news)
+    //     showNews()
+    // }
+    // demoFunction()
+        
+    const demoFunction = async()=>{
+        await addNews(new_news)
+        showNews()
+    }
+    demoFunction()
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            width: 40vw;
+            height: 40vh;
+            margin: 10px auto;
+            overflow: hidden;
+            
+        }
+        .box img{
+            width:100%;
+            height: 100%;
+            transition: 2s ease-in-out;
+            filter: grayscale(1);
+
+        }
+        .box:hover img{
+            transform: scale(1.5,1.5);
+            filter: grayscale(0);
+            /* filter:none; */
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="https://th.bing.com/th/id/R.4a10cc5456ddb0170e461fc60b002a98?rik=E49HgzWnOvklZw&riu=http%3a%2f%2fbeddingnewsnow.com%2fwp-content%2fuploads%2f2024%2f06%2fphotos.png&ehk=Ko4PmfmN7jF%2baqhjYS9ihVYeD80x8yXuvld9vSOUIo8%3d&risl=&pid=ImgRaw&r=0" alt="">
+    </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weather Forecast</title>
+</head>
+<body>
+  <h2>Temperature in Kathmandu (Hourly)</h2>
+  <div id="weather">Loading...</div>
+
+  <script>
+    const url = 'https://api.open-meteo.com/v1/forecast?latitude=27.7017&longitude=85.3206&hourly=temperature_2m&timezone=Asia%2FKathmandu';
+
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        const temperatureData = data.hourly.temperature_2m;
+        const timeData = data.hourly.time;
+
+        
+        let output = '<ul>';
+        for (let i = 0; i < 10; i++) {
+          output += `<li><strong>${timeData[i]}</strong>: ${temperatureData[i]}°C</li>`;
+        }
+        output += '</ul>';
+
+        document.getElementById('weather').innerHTML = output;
+      })
+      .catch(error => {
+        console.error('Error fetching weather data:', error);
+        document.getElementById('weather').textContent = 'Failed to load weather data.';
+      });
+  </script>
+</body>
+</html>

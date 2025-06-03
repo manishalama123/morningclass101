@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="showNews">show news</button>
+    <button id="addNews">Addnews</button>
+    <div ></div>
+    <script>
+        let news = [
+            {
+                newsTitle : 'First news',
+                newsContent : 'This is content of first news'
+
+            },
+            
+            {
+                newsTitle : 'second news',
+                newsContent : 'This is content of second news'
+
+            },
+            {
+                newsTitle : 'Third news',
+                newsContent : 'This is content of third news'
+
+            },
+        ]
+            
+        const showNews = () =>{
+            setTimeout(()=>{
+
+
+            
+            result = ``;
+            news.forEach((post)=>{
+                return result += `
+                <li> ${post.newsTitle}</li>
+                <p> ${post.newsContent}</p>
+                `
+            })
+            document.querySelector('div').innerHTML = result},1000);
+        }
+        // document.getElementById('showNews').addEventListener('click',showNews)
+        // showNews()
+
+
+        // const addNews=(data)=>{
+        //     setTimeout(() => {
+        //         news.push(data);
+        //     },1000);
+        // }
+
+        const addNews =(data, callback)=>{
+            setTimeout(() => {
+                news.push(data);
+            }, 2000);
+            callback()
+        }
+
+        new_news = {
+            newsTitle : 'Fourth News',
+            newsContent : 'This is content of FOurth news'
+        }
+
+        document.getElementById('addNews').addEventListener('click',addNews(new_news,showNews))
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local storage</title>
+</head>
+<body>
+    <!-- local storage : store user request for locally in web browser -->
+    <button id="remove">Remove</button>
+    <p id="demo"></p>
+    <button class="show">Show Data</button>
+    
+    <div class="f_name"></div>
+    <div class="l_name"></div>
+    <div class="age"></div>
+    <div class="gender"></div>
+    <script>
+        let key = 'name'
+        let value = 'Manisha'
+
+        localStorage.setItem(key,value);
+        let name = localStorage.getItem(key)
+        console.log(name);
+        document.getElementById('demo').innerText = name;
+
+        let btn = document.getElementById('remove');
+
+        // btn.addEventListener('click',()=>{
+        //     localStorage.clear()
+        // })
+        btn.addEventListener('click',()=>{
+            localStorage.removeItem(key)
+        })
+
+        sessionStorage.setItem(key,value);
+
+        // JSON : Javascript Object Notation
+        const student = {
+            f_name : 'Manisha',
+            l_name : 'lama',
+            age : 22,
+            gender : 'female',
+            courses : ['HTML', 'CSS', 'JS', 'React']
+        }
+        let jsonStudent = JSON.stringify(student)
+
+        localStorage.setItem('std',jsonStudent);
+        // let rs = localStorage.getItem('std')
+        // let stringToJSON = JSON.parse(rs)
+
+        let showD = document.querySelector('.show')
+        const showData=()=>{
+            let rs = localStorage.getItem('std')
+            let stringToJSON = JSON.parse(rs)
+            // for ( let key in stringToJSON.keys()){
+            //     document.getElementById('show').innerHTML = `<p> ${stringToJSON.key}</p>`
+            console.log(stringToJSON);
+            let keysOf = Object.keys(stringToJSON);
+            console.log(keysOf);
+            document.querySelector('.f_name').innerText = stringToJSON.f_name
+            document.querySelector('.l_name').innerText = stringToJSON.l_name
+            document.querySelector('.age').innerText = stringToJSON.age
+            document.querySelector('.gender').innerText = stringToJSON.gender
+            
+
+        }
+        showD.addEventListener('click',showData);
+        
+    </script>
+</body>
+</html>

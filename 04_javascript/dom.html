@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .demo{
+            color: red;
+        }
+        .box{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- DOM: Document Object Model
+        -when a browser loads an HTML document, it creates a model of that page in memory.
+        -DOM represents the document as a tree-like structure of objects, where:
+        1.document
+        2.elements
+        3.attribute
+        4.text
+        5.comment
+
+        -it is used to read and modify content of HTML document
+        -read and modify structures: add or remove elements.
+        -modify styles 
+        -react to user events.
+
+        DOM manipulation concepts:
+        1.accessing elements(selecting)
+        - document.getElementById('id_name'): unique element
+        - getElementByClassName('cn') : common classNames
+        - getElementByTagName('title'): Element Name
+        - querySelector('cssSelector') : select first element that match css
+        - querySelectorAll('cssSelector'): to all elements matches a css selector
+    
+    -->
+    <div>
+        <h2 id="demo">hello</h2>
+        <h1 class="demo">Heading</h1>
+        <p class = "demo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque voluptatum rerum inventore minus temporibus atque quidem, eius quibusdam ipsam animi molestias tempore similique voluptatibus, veniam a, esse earum. Voluptatum doloribus voluptatem perspiciatis alias inventore voluptatibus in modi dolores eos dolore amet nesciunt omnis corporis dolorum, veniam consequuntur dolor similique recusandae!</p>
+    </div>
+    <form action="">
+        <input type="text"  id="name" >
+    </form>
+    <script>
+        const header = document.getElementById('demo');
+        // console.log(header);
+        const item = console.log(document.getElementsByClassName('demo'));
+        // console.log(document.getElementsByTagName('title'));
+        // console.log(document.querySelector('.demo'));
+        // console.log(document.querySelectorAll('.demo'));
+
+        // reading and modifying
+        // element.innerHTML : to add content with html elements
+        header.innerHTML = `<h5>hello world</h5>`
+        // element.textContent : only 
+        
+        document.querySelector('.demo').textContent ="Durskhishya"
+
+        let data = document.getElementById('name')
+        // document.getElementById('name').value = 'Durskiksya'
+        console.log(data.value);
+        data.value = 'Dursikshya'
+
+        let inputs = document.getElementById('name')
+        console.log(inputs.getAttribute('type')); 
+        inputs.setAttribute('type','password')
+
+        // Modify style
+        header.style.color = 'white'
+        header.style.backgroundColor = 'black'
+        header.style.fontFamily ='Calibri';
+
+        inputs.style.border = '1px solid red'
+        inputs.style.borderRadius = '50px'
+        let para = document.querySelectorAll('.demo')
+        para.setAttribute('class', 'box')
+        para.classList.add('box')
+
+    </script>
+</body>
+</html>

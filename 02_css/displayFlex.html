@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0px;
+            box-sizing: border-box;
+         }
+        /* .demo{
+            background-color: aqua;
+            display:none;
+        }
+        img{
+            width:100px;
+            border: 1px solid;
+            display: inline-block;
+        } */
+
+        .container{
+            width: 100vw;
+            height:50vh;
+            background-color: #3f77c5;
+            display: flex;
+            /* flex-direction: row-reverse; */
+            /* flex-direction: column; */
+            flex-wrap: wrap;
+            /* row-gap:100px;
+            column-gap: 50px; */
+            /* gap: 100px ; */
+            justify-content: space-between;
+            /* justify-items: end; */
+            align-content: space-evenly;
+        }
+        .box{
+            width: 23%;
+            height: 100px;
+            background-color: #c71a1a;
+            
+        }
+        .demo{
+            width: 100vw;
+            height: 500px;
+            background-color: #8d10c3;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            /* justify-items: center; */
+            
+        }
+        /* .lbox, .rbox{
+            width: 50%;
+            height: 100%;
+        } */
+        p{
+            width: 48%;
+            /* height: 40%; */
+
+            
+        }
+        img{
+            width:48%;
+            display: block;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <!-- 
+        Display
+        1.block
+        2.inline
+        3.none
+        4.inline-block
+        5.flex
+     -->
+     <!-- <div class="demo">7</div>
+     <img src="https://th.bing.com/th/id/OIP.-Dd3spaI42dcGHylQUb9AwHaHa?rs=1&pid=ImgDetMain" alt="">
+     <img src="https://th.bing.com/th/id/OIP.-Dd3spaI42dcGHylQUb9AwHaHa?rs=1&pid=ImgDetMain" alt=""> -->
+    <!-- Flex
+    turn element into flex container, allowing flexible child alignment -->
+
+    <div class="container">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+        <div class="box box6">6</div>
+        <div class="box box7">7</div>
+        <div class="box box8">8</div>
+    </div>
+    <div class="demo">
+        <!-- <div class="lbox"> -->
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero eligendi aliquam ab in cum voluptatum porro quos consequuntur aut iste eveniet expedita sunt, laboriosam dignissimos. Veritatis eligendi magnam assumenda saepe non laboriosam esse optio, odit cupiditate fuga in obcaecati, rerum cum architecto ut minus aut accusantium quod, quidem porro reprehenderit provident quaerat ad. Rerum, soluta sunt ipsam eaque adipisci a!</p>
+
+        <!-- </div> -->
+        
+        
+        <!-- <div class="rbox"> -->
+            <img src="https://th.bing.com/th/id/OIP.-Dd3spaI42dcGHylQUb9AwHaHa?rs=1&pid=ImgDetMain" alt="">
+        <!-- </div> -->
+    </div>
+</body>
+</html>

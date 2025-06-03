@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hamburger to X Toggle</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f0f0f0;
+    }
+
+    .menu-btn {
+      width: 40px;
+      height: 40px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s;
+    }
+
+    .menu-btn:hover {
+      background-color: #e6e6e6;
+    }
+
+    .menu-btn .bar {
+      position: relative;
+      width: 25px;
+      height: 2px;
+      background-color: #333;
+      border-radius: 1px;
+      transition: all 0.4s ease;
+    }
+
+    .menu-btn .bar::before,
+    .menu-btn .bar::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 2px;
+      background-color: #333;
+      border-radius: 1px;
+      transition: all 0.4s ease;
+    }
+
+    .menu-btn .bar::before {
+      top: -8px;
+    }
+
+    .menu-btn .bar::after {
+      bottom: -8px;
+    }
+
+    /* Active State */
+    .menu-btn.active .bar {
+      background-color: transparent;
+    }
+
+    .menu-btn.active .bar::before {
+      transform: rotate(45deg);
+      top: 0;
+    }
+
+    .menu-btn.active .bar::after {
+      transform: rotate(-45deg);
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+
+<div class="menu-btn" id="menu-btn">
+  <div class="bar"></div>
+</div>
+
+<script>
+  const btn = document.getElementById('menu-btn');
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>

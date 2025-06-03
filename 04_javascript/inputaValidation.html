@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validation</title>
+</head>
+<body>
+    <h2>Voting Form</h2>
+    <!-- <input type="text" name="" id="username" placeholder="Enter your name"> -->
+    <input type="number" name="" id="age" placeholder ="Enter your age">
+    <!-- <button onclick="submitForm()">  Submit</button> -->
+    <button onclick="voting()">  Submit</button>
+    <p id="message"></p>
+
+
+    <script>
+        // const submitForm =() =>{
+        //     const input = document.getElementById('username');
+        //     const message = document.getElementById('message');
+
+        //     try{
+        //         message.textContent = ""
+        //         // check if the input exists and has value
+
+        //         if(!input || input.value.trim()=== ""){
+        //             throw new Error("Name is required")
+        //         }
+        //         message.style.color = 'green'
+        //         message.textContent = `Welcome, ${input.value.trim()}!`
+                
+        //     }
+        //     catch(error){
+        //         message.style.color = 'red'
+        //         message.textContent = `${error.message}`
+        //     }
+        //     finally{
+        //         console.log('Form submission attempted');
+        //     }}
+
+        let citizenship = 18;
+            const voting =()=>{
+                const age = document.getElementById('age');
+                const message = document.getElementById('message');
+                try{
+                    message.textContent = ""
+                // check if the input exists and has value
+                // let age = parseInt(ageInput.value.trim());
+
+                if(age.value < citizenship){
+                    throw new Error("Sorry,You cant vote")
+                }
+                
+                message.style.color = 'green'
+                message.textContent = `You can vote because your age is :, ${age.value}!`
+                
+                
+                    
+                }
+                catch(error){
+                    message.style.color = 'red'
+                    message.textContent = `${error.message}`
+                }
+
+            }
+
+
+    </script>
+</body>
+</html>

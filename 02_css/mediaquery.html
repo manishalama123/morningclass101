@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* default view */
+        .box{
+            width:200px;
+            height: 200px;
+            background-color: rgb(42, 93, 113);
+            margin: 40vh auto;
+            border-radius: none;
+            transition: all 0.3s ease;
+            }
+        /* tablet-view */
+        @media screen and (max-width:900px) and (min-width:600px){
+
+            .box{
+                width:200px;
+                height: 200px;
+                background-color: rgb(198, 215, 69);
+                margin: 40vh auto;
+                border-radius: 20%;
+                }
+        }
+        /* small devices, mobile view */
+        @media (max-width:600px) {
+            .box{
+                width:200px;
+                height: 200px;
+                background-color: rgb(197, 36, 156);
+                margin: 40vh auto;
+                border-radius: 50%;
+                }
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Responsive Design -->
+    <!-- media query
+    1.screen height  or width
+    2.device type(screen, print)
+    3.orientation(landscape, potrait)
+    4.device resolution(like retina display)
+    @media device type and (condition)
+    conditions: 
+    1.max-width: screen width<=value
+    2.min-width: screen width>=value
+    3.orientation: p/l
+    4.resolution : screen resolution
+
+    @media(min-width>=600px)
+    -->
+    <div class="box"></div>
+</body>
+</html>

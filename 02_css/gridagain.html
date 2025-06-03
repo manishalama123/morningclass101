@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid example</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 2fr 3fr 3fr 2fr;
+            grid-template-rows: 10vh 40vh 40vh 10vh;
+
+        }
+        .box1{
+            background-color: aqua;
+            grid-row-start:1 ;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end:5 ;
+        }
+        .box2{
+            background-color: rgb(255, 123, 0);
+            grid-row-start:2 ;
+            grid-row-end: 4;
+            grid-column-start:1 ;
+            grid-column-end: 2;
+        }
+        .box3{
+            background-color: rgb(195, 255, 0);
+            grid-row-start:2;
+            grid-row-end: 3;
+            grid-column-start:2 ;
+            grid-column-end:4 ;
+        }
+        .box4{
+            background-color: rgb(210, 3, 251);
+            grid-row-start:3 ;
+            grid-row-end:4 ;
+            grid-column-start: 2;
+            grid-column-end:3 ;
+        }
+        .box5{
+            background-color: rgb(169, 14, 123);
+            grid-row-start:3 ;
+            grid-row-end:4 ;
+            grid-column-start:3 ;
+            grid-column-end:4 ;
+        }
+        .box6{
+            background-color: rgb(255, 0, 0);
+            grid-row-start:2 ;
+            grid-row-end: 4;
+            grid-column-start: 4;
+            grid-column-end:5 ;
+        }
+        .box7{
+            background-color: aqua;
+            grid-row-start:4 ;
+            grid-row-end:5 ;
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="box box1">Top</div>
+        <div class="box box2">Bottom</div>
+        <div class="box box3">a</div>
+        <div class="box box4">b</div>
+        <div class="box box5">c</div>
+        <div class="box box6">d</div>
+        <div class="box box7">e</div>
+    </div>
+</body>
+</html>

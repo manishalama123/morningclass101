@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav{
+            width: 100vw;
+            height: 50px;
+            background-color: #112233;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            color: antiquewhite;
+        }
+        nav .logo{
+            width: 15%;            
+        }
+        .logo h2{
+            text-align: center;
+        }
+
+        nav ul{
+            display: inherit;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            list-style-type: none;
+            /* align-items: center; */
+            width: 50%;
+            /* height: 100%; */
+        }
+
+        ul li a{
+            color: antiquewhite;
+            text-decoration: none;
+            /* display: inline-block; */
+        }
+        nav ul li{
+            width: 20%;
+            /* height: 100%; */
+            text-align: center;
+            padding-top: 15px;
+        }
+        li .subcategory{
+            width: 120px;
+            position: absolute;
+            background-color: bisque;
+            display: none;
+            color: black;
+        }
+        .category li:hover .subcategory{
+            display: block;
+        }
+        .subcategory li{
+            width: 100%;
+        }
+        ul li:hover{
+            background-color: bisque;
+        }
+        ul li:hover a{
+            color: black;
+        }
+
+        nav .button{
+            width: 15%;
+        }
+
+        .button button{
+            padding: 5px 10px;
+            font-size: large;
+            border-radius: 10px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="log"><h2>Logo</h2></div>
+        <ul class="category">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Services</a>
+                <ul class="subcategory">
+                    <li>Mobile Service</li>
+                    <li>laptop Services</li>
+                    <li>Logistics</li>
+                </ul>
+            </li>
+            <li><a href="">Career</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+        <div class="button">
+            <button class="login">Login</button>
+            <button class="signup">Signup</button>
+        </div>
+    </nav>
+</body>
+</html>

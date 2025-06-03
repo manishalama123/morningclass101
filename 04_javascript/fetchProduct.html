@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+
+        }
+        #product {
+            border : 1px solid #ccc;
+            padding : 15px;
+            margin-top : 10px;
+            border-radius: 5px;
+            max-width: 400px;
+        }
+        img{
+            width:100%;
+            height: auto;
+        }
+        h3{
+            margin-bottom: 5px;
+
+        }
+        p{
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h2>Products from fakestore API</h2>
+    <button onclick="loadProduct()">Load Product</button>
+    <div id="product">
+
+    </div>
+    <script>
+        const loadProduct =()=>{
+            fetch(`https://fakestoreapi.com/products/1`)
+            .then(response =>{
+                if(!response.ok){
+                    throw new Error('Network rersponse was not ok')
+                }
+                return response.json()
+            })
+            .then(product =>{
+                const productDiv = document.getElementById('product').innerHTML =`<img src="${product.image}" alt='product imag' /> <h3>  ${product.title}</h3>
+                <p>${product.price}</p>
+                <p>${product.description}</p>
+                <p>${product.category}</p>`
+            })
+            .catch(err=>{
+                document.getElementById('product').innerText =`Error loading products :${err} `
+            })
+        }
+    </script>
+</body>
+</html>

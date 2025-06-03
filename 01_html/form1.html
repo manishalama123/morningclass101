@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Fill up Form</legend>
+        <form action="#" >
+            
+            
+            <label for="name">Name* </label>
+            <input type="text" name="name" id="name" autofocus="on" required><br><br>
+
+            <label for="email">Email*</label>
+            <input type="email" name="email" id="email" required><br><br>
+
+            <label for="gender">Gender</label>
+            <input type="radio" name="gender" id="male" >Male
+            <input type="radio" name="gender" id="female" >Female
+            <input type="radio" name="gender" id="other" >Other<br><br>
+
+            <label for="password">Password</label>
+            <input type="text" name="password" id="pwd" minlength="8" maxlength="12"><br><br>
+
+            <label for="repassword">Confirm Password</label>
+            <input type="text" name="repassword" id="repwd"><br><br>
+
+            <label for="country">Country</label>
+            <select name="country" id="country">
+                <option>--Select a Country--</option>
+                <option value="Nepal">Nepal</option>
+                <option value="Bhutan">Bhutan</option>
+                <option value="India">India</option>
+                <option value="China">China</option>
+            </select><br><br>
+
+            <label for="profile">Profile Picture</label>
+            <input type="file" name="profile" id="pfp"><br><br>
+
+            <label for="about">About yourself:</label>
+            <textarea name="about" id="about" cols="30" rows="10"></textarea><br><br>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+
+            
+        </form>
+    </fieldset>
+</body>
+</html>

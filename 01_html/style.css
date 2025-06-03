@@ -1,0 +1,47 @@
+body{
+    margin:0 200px ;
+    padding:0;
+    background-color: #e4d5d5;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+h3{
+    color: #ffcc00;
+}
+.intro{
+    text-align: center;
+    line-height: 0.4;
+    color: #ffcc00;
+}
+.container{
+    margin: 0 40px;
+    display:flex;
+    max-width: 1000 px;
+    min-height: 100vh;
+}
+.left-side{
+    width:25%;
+    
+    background-color: #0b4469;
+    color:white;
+    padding: 30px;
+}
+.left-side a{
+    text-decoration: none;
+    color: white;
+}
+.left-side a:hover{
+    text-decoration: none;
+    color: #ffcc00;
+}
+.profile-pic{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.right-side{
+    width:75%;
+    background-color: #ffffff;
+    padding:30px;
+}

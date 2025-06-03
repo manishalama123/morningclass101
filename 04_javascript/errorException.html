@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exception handling</title>
+</head>
+<body>
+    <!-- JS errorr
+    types of error 
+    1. syntax error
+    2. reference error : variable doesnot exist
+    3.  type error: wrong datatypes 
+    4. range error : number outside the range.
+    5. run time error : 
+
+    to handle these error we have 
+    1. try block: contains code that may throw an error.
+     -if an error occurs, control is passes to the catch block.
+     syntax;
+     try{
+        block of code taht migth throws an error
+     }
+
+    2. catch block :
+     -handles the error thrown in the try block.
+     - receives an error object with details(like message, name, stack).
+     catch(error){
+         handle the error
+        console.log(error.message)
+     }
+
+    3. finally block(optional)
+    -executes always, regardless of whether an error occured or not.
+    - used for cleanup activities, like closing connection and clearing memory.
+    finally {
+        code that runs no matter what
+    }
+    4.throw
+    -used to throw error message if error occured 
+    -->
+    
+    <script>
+        try{
+            let x = y+1
+        }
+        catch(error){
+            console.log('Error Occured', error.message);
+        }
+        // const divide=(a,b)=>{
+        //     if(b==0){
+        //         throw new Error('Cannot divide by zero.')
+        //     }
+        //     return a/b
+        // }
+        // try{
+        //     console.log(divide(10,0));
+        // }
+        // catch(err){
+        //     console.log(err.message);
+        // }
+        // finally{
+        //     console.log('Operation terminated');
+        // }
+        // error.name
+        // error.message
+        // error.stack
+
+        // withdraw
+        let balance = 5000
+        const withdraw=(amt)=>{
+            if(balance< amt){
+                throw new Error('the  balance is less than the amount.')
+            }
+            return balance-=amt
+        }
+        try{
+            console.log(`the finale balance is :`, withdraw(400));
+        }
+        catch(err){
+            console.log(err.message);
+        }
+    </script>
+</body>
+</html>

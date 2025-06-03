@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- internal CSS -->
+    <style>
+        *{
+            background-color:pink;
+        }
+        h2{
+            color:green;
+            text-align: center;
+        }
+        #demo{
+            background-color: blueviolet;
+        }
+        .demo{
+            font-weight: normal;
+            color:white;
+        }
+        h1,h2,.demo{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+        .title{
+            font-size: 12px;
+        }
+        .box{
+            background-color: #e30f0f;
+            color:white !important;
+            margin: 60px;
+        }
+        
+        .box > .title{
+            color: aqua;
+        }
+        span:hover{
+            cursor: pointer;
+        }
+        
+        .color-red{
+            color: rgba(195, 17, 17, 0.49);
+            background-color: #fff;
+        }
+        
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 
+       CSS: CSS  Cascading Style Sheet
+       types of css
+       1. Inline
+       2. External
+       3. Internal
+
+       selector{
+        property: value;
+       }
+
+       Selector:
+       1.universal: *
+       2.element: tags, element like h1.p, img,form etc
+       3.Id selector: #idname
+       4. Class Selector: .classname
+       5.combined selector: s1, s2, s3
+       6.pseudo selector:btn:hover, :before, after
+       7. descendant selector: .box.title
+       8. child selector:.box > .title
+     -->
+
+     <!-- 1.inline -->
+    <h1 style="color: aqua; text-align: center;">Manisha</h1>
+    <h2>This is demo</h2>
+    <h3 id="demo" class="demo">We are going to learn  <span>CSS</span></h3>
+
+    <div class="box">
+        <p>this is a box</p>
+        <p class="title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa, rerum. Omnis quis consectetur dolore nostrum temporibus saepe sit officia beatae perspiciatis quod aspernatur cum doloribus, et id qui iusto sunt porro doloremque! Labore nobis mollitia iste rerum eius, suscipit molestias accusantium architecto delectus animi, omnis id velit illum alias adipisci?</p>
+        <div class="box1">
+
+
+    </div>
+        
+
+     </div>
+     <p class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolorum laborum omnis voluptates. Eius ratione molestias molestiae omnis pariatur, sit veniam eaque distinctio provident sequi at iste sunt saepe aperiam dolores ab, voluptas earum quos nulla. Quos ipsum earum quas modi suscipit molestiae dolorem vero animi autem, quisquam provident dicta pariatur nostrum laudantium cumque quod repellat excepturi molestias numquam fuga!</p>
+     <p class="title demo color-red">We are here</p>
+</body>
+</html>

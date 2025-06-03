@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind CSS</title>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+  <!-- custom css for tailwind -->
+  <!-- <style type="text/tailwindcss">
+        @theme{
+            --color-blog : #008000;
+
+        }
+    </style> -->
+  <!-- tailwind output:css linking -->
+  <link rel="stylesheet" href="src/output.css">
+</head>
+
+<body>
+  <!-- responsive -->
+  <div class="w-full bg-amber-500 ">
+    <nav class="container flex flex-col md:flex-row justify-between items-center bg-amber-500 p-4 text-white ">
+      <div class="text-2xl font-bold ">LOGO</div>
+      <div class="flex flex-col md:flex-row gap-4 md:gap-x-14 mt-4 md:mt-0 ">
+        <a href="#" class="hover:text-gray-500 ">Home</a>
+        <a href="#" class="hover:text-gray-500 ">About</a>
+        <a href="#" class="hover:text-gray-500 ">Services</a>
+        <a href="#" class="hover:text-gray-500 ">Contact Us</a>
+      </div>
+      <div class="mt-4 md:mt-0 ">
+        <button class="bg-green-600 px-4 py-2 rounded-4xl hover:bg-green-800 ">Login</button>
+        <button class="bg-red-600 px-4 py-2 rounded-4xl hover:bg-red-800 ">Signup</button>
+      </div>
+    </nav>
+  </div>
+  <!-- hero section -->
+  <section class="w-full md:h-96 bg-teal-400  py-7 px-24 flex items-center justify-center ">
+    <div class="w-fit  md:2/4 items-center flex flex-col gap-4 m-auto ">
+      <h1 class="text-white font-bold text-4xl ">Web Content</h1>
+      <p class="max-w-2xs text-white  text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium odio, mollitia quos
+        dolores optio ratione sint corrupti neque quisquam qui culpa ex nam. Perferendis, facilis, sit dolorum eos ea,
+        veniam cupiditate omnis cum vero sed sequi quidem enim ipsum. Possimus.</p>
+      <button class="bg-amber-500 px-4 py-2 rounded-4xl hover:bg-amber-600 text-white ">Read More</button>
+    </div>
+
+  </section>
+
+  <!-- <h1 class="text-3xl underline-offset-8">Hello world</h1>
+    <p class="font-bold text-3xl italic font-stretch-50% text-center text-red-500 w3xl h-40 overflow-hidden hover:overflow-visible ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ad possimus laudantium nisi exercitationem laboriosam at. Dolorem laborum tenetur ipsum! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus, fuga! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum, incidunt explicabo. Corporis dicta repudiandae ullam facilis sequi ea ad velit?</p>
+    <button class="border-2 bg-amber-700 text-white rounded-2xl block m-auto px-2.5 outline-2 outline-amber-300 ">Submit</button>
+
+    <div class="w-25 h-25 rounded-[50%] border-2"></div> -->
+
+    <!-- gallery --> 
+    <section class="w-full bg-amber-400 py-6">
+      <h2 class="text-3xl font-bold text-center mb-4">Food Gallery</h2>
+      <div class="container mx-auto grid grid-cols-1 gap-2 p-2 md:grid-cols-4 md:grid-rows-3 text-center">
+        
+        <div class="md:row-span-2">
+          <img src="https://th.bing.com/th/id/OIP.B39-1EvwOFXOffOfIKZT0AHaEK?w=289&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Food 1" class="w-full h-full object-cover">
+        </div>
+    
+        <div class="md:col-span-2">
+          <img src="https://th.bing.com/th/id/OIP.B39-1EvwOFXOffOfIKZT0AHaEK?w=289&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Food 2" class="w-full h-full object-cover">
+        </div>
+    
+        <div class=" ">
+          <img src="https://th.bing.com/th/id/OIP.B39-1EvwOFXOffOfIKZT0AHaEK?w=289&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Food 3" class="w-full h-full object-cover">
+        </div>
+    
+        <div class=" ">
+          <img src="https://th.bing.com/th/id/OIP.B39-1EvwOFXOffOfIKZT0AHaEK?w=289&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Food 4" class="w-full h-full object-cover">
+        </div>
+    
+        <div>
+          <img src="https://th.bing.com/th/id/OIP.B39-1EvwOFXOffOfIKZT0AHaEK?w=289&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Food 5" class="w-full h-full object-cover">
+        </div>
+    
+        <div>
+          <img src="https://th.bing.com/th/id/OIP.B39-1EvwOFXOffOfIKZT0AHaEK?w=289&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Food 6" class="w-full h-full object-cover">
+        </div>
+    
+        <div class="md:col-span-2">
+          <img src="https://th.bing.com/th/id/OIP.B39-1EvwOFXOffOfIKZT0AHaEK?w=289&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Food 7" class="w-full h-full object-cover">
+        </div>
+    
+        <div class="md:col-span-2">
+          <img src="https://th.bing.com/th/id/OIP.B39-1EvwOFXOffOfIKZT0AHaEK?w=289&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Food 8" class="w-full h-full object-cover">
+        </div>
+    
+      </div>
+    </section>
+    
+  
+  <!-- <div class="w-full max-w-2xl my-3.5 mx-auto p-5 shadow shadow-gray-500 flex flex-col gap-3.5 ">
+    <div class="col-span-1 rounded-b-2xl flex flex-col justify-center items-center ">
+      <img src="https://th.bing.com/th/id/OIP.HxV79tFMPfBAIo0BBF-sOgHaEy?w=273&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+        alt="no image" class="w-36 h-36 rounded-[50%] ">
+      <h1 class="text-yellow-400 font-bold">Manisha Lama</h1>
+      <h2>Python Developer</h2>
+      <div class="link">
+        <a href="#">[GitHub]</a>
+        <a href="#">[LinkedIn]</a>
+      </div>
+    </div>
+
+    <div class="col-span-1 border-2 ">
+      <h1 class="text-red-500">About Me</h1>
+      <p>My name is Manisha Lama. I am currently learning Tailwind Css. Tailwind Css is a framework of CSS.</p>
+      <p class="text-green-500 hidden md:block">This text does not appear in Mobile devices</p>
+    </div>
+  </div> -->
+
+
+</body>
+
+</html>

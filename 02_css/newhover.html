@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+
+        .container{
+            margin: 50px auto;
+            width: 30vh;
+            height: 30vh;
+            position: relative;
+        }
+        
+        .btn{
+            padding: 10px;
+            margin:10px auto;
+            background-color: rgb(55, 171, 217);
+            border-radius: 30px;
+            border: none;
+            position:absoulte;
+            transition: all 3s ease-in-out;
+        }
+        .arrow{
+           width: 20px; 
+           height: 20px;
+           margin:10px auto;
+           top: 24px;
+           left: 20px;
+           background-color: rgb(55, 171, 217);
+           position:absolute ;
+           transform: rotate(45deg);
+           display: none;
+        }
+        h4{
+            display:none;
+            border: 1px solid silver;
+            width: 50%;
+            
+        }
+        /* .arrow,h4{
+            transition: all 3s ease-in-out;
+        } */
+        .btn:hover ~.arrow,
+        .btn:hover ~h4 {
+            display: block;
+            
+        }
+        /* .btn:hover .arrow{
+            display: block;
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <div class="wrapper"> -->
+            <button class="btn">JavaScript</button>
+            <div class="arrow"></div>
+            <h4 >This is java script</h4>
+        <!-- </div> -->
+        
+
+    </div>
+    
+</body>
+</html>

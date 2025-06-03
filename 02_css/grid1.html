@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        .container{
+            width: 100vw;
+            height: 70vh;
+            background-color: #4c98db;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            justify-items: center;
+            /* align-items: center; */
+        }
+        .item{
+            width: 100px;
+            height: 150px;
+            background-color: rgb(212, 189, 158);
+        }
+        .container .item:nth-child(even){
+            background-color: #fff;
+        }
+        ul{
+            /* width: 100vw; */
+            display: block;
+            margin: 10px auto;
+        }
+        li::before{
+            content: "X ";
+        }
+        li::after{
+            content: " Y";
+        }
+        ul li:last-child{
+            color: aqua;
+        }
+        p::first-letter{
+            font-size: 40px;
+        }
+        p::selection{
+            background-color: yellow;
+        }
+        input:required{
+            border-color: red;
+        }
+        input:focus{
+            border-color: rgb(239, 14, 228);
+            background-color: #f41111;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+        <div class="item item6">6</div>
+        
+
+    </div>
+
+    <ul>
+        <li>Complete notes</li>
+        <li>Go to college</li>
+        <li>Attend seminar</li>
+
+
+    </ul>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sint repellendus necessitatibus magnam architecto ipsa. Magni, iste tenetur adipisci rem labore cumque id, quod dolor doloremque beatae temporibus vero pariatur.</p>
+    <input type="text" name="" id="">
+    <input type="text" name="" id="" required>
+</body>
+</html>
